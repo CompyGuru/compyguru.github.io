@@ -1,7 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+
 
 #header3-7 H3 {
   text-align: center;
   font-size: 100px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+#header3-7 B {
+  font-family: 'Roboto', sans-serif;
+}
+#features1-8 H4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }

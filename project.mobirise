@@ -41,8 +41,12 @@
             "H3": {
               "text-align": "center",
               "font-size": "100px",
-              "font-family": "'Ubuntu', sans-serif",
-              "googleLink": "https://fonts.googleapis.com/css?family=Ubuntu:400,300,700"
+              "font-family": "'Noto Sans', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Noto+Sans:400,700"
+            },
+            "B": {
+              "font-family": "'Roboto', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Roboto:400,300,700"
             }
           }
         },
@@ -137,7 +141,14 @@
             "Theme"
           ],
           "_name": "features1",
-          "_anchor": "features1-8"
+          "_anchor": "features1-8",
+          "_styles": {
+            "H4": {
+              "font-family": "'Roboto', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Roboto:400,300,700",
+              "font-size": "30px"
+            }
+          }
         }
       ]
     }
