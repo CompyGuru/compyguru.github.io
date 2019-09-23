@@ -34,7 +34,7 @@
               "text-align": "center"
             },
             ".mbr-section-title": {
-              "font-size": "80px"
+              "font-size": "84px"
             }
           },
           "_params": {
@@ -59,7 +59,7 @@
           },
           "title": "Hamid Tahir",
           "meta": "By John Smith posted July 30, 2015",
-          "text": "<p>MASc - Mechanical and Mechatronics Engineering - Autonomous Vehicles<br><span style=\"font-size: 1.25rem;\">BASc - Mechatronics Engineering</span></p>",
+          "text": "<p>MASc - Autonomous Vehicles<br></p>",
           "button": "<a data-app-btn=\"true\" class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobirise.com\">See All Templates</a>",
           "alias": "purity/components",
           "_tags": [
