@@ -16,3 +16,21 @@
 #features1-8 .btn {
   font-size: 22px;
 }
+#ext_menu-c .navbar-toggler {
+  color: #000;
+}
+#ext_menu-c .navbar-brand {
+  font-size: 22px;
+}
+#ext_menu-b .navbar-toggler {
+  color: #000;
+}
+#ext_menu-b .navbar-brand {
+  font-size: 22px;
+}
+#ext_menu-a .navbar-toggler {
+  color: #000;
+}
+#ext_menu-a .navbar-brand {
+  font-size: 22px;
+}
