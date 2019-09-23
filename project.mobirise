@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "contact.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -43,12 +43,12 @@
             "showText": true,
             "showButton": false,
             "paddingTop": "4",
-            "paddingBottom": "0",
+            "paddingBottom": "1",
             "bgImageRadio": false,
             "bgImage": "@THEME_PATH@/components/_images/photo-3.jpg",
             "parallax": true,
             "bgColorRadio": true,
-            "bgColor": "#FFF8E0",
+            "bgColor": "#f1c050",
             "bgVideoRadio": false,
             "bgVideo": {
               "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
@@ -59,7 +59,7 @@
           },
           "title": "Hamid Tahir",
           "meta": "By John Smith posted July 30, 2015",
-          "text": "<p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p>",
+          "text": "<p>MASc - Mechanical and Mechatronics Engineering - Autonomous Vehicles<br><span style=\"font-size: 1.25rem;\">BASc - Mechatronics Engineering</span></p>",
           "button": "<a data-app-btn=\"true\" class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobirise.com\">See All Templates</a>",
           "alias": "purity/components",
           "_tags": [
@@ -74,7 +74,7 @@
             "showTitles": false,
             "showCaptions": false,
             "showButtons": true,
-            "paddingTop": "0",
+            "paddingTop": "2",
             "paddingBottom": "2",
             "columns": 4,
             "bgImageRadio": false,
@@ -92,54 +92,70 @@
           },
           "media1": {
             "image": {
-              "src": "@PROJECT_PATH@/assets/images/feature-bootstrap.png",
+              "src": "@THEME_PATH@/components/_images/feature-bootstrap.png",
               "class": "card-img-top",
-              "width": 600,
-              "active": true
+              "width": 600
             },
             "iconFont": {
               "class": "mbr-iconfont mbr-iconfont-features1",
-              "link": "",
-              "size": 0
+              "linkInNewWindow": false,
+              "name": "pages",
+              "family": "MobiriseIcons",
+              "link": "projects.html",
+              "size": 0,
+              "newWindow": false,
+              "active": true
             }
           },
           "media2": {
             "image": {
-              "src": "@PROJECT_PATH@/assets/images/feature-responsive.png",
+              "src": "@THEME_PATH@/components/_images/feature-responsive.png",
               "class": "card-img-top",
-              "width": 600,
-              "active": true
+              "width": 600
             },
             "iconFont": {
               "class": "mbr-iconfont mbr-iconfont-features1",
-              "link": "",
-              "size": 0
+              "linkInNewWindow": false,
+              "name": "paperclip",
+              "family": "MobiriseIcons",
+              "link": "assets/files/Hamid Tahir Sample Resume.pdf",
+              "size": 0,
+              "active": true,
+              "newWindow": false
             }
           },
           "media3": {
             "image": {
-              "src": "@PROJECT_PATH@/assets/images/feature-google-fonts.png",
+              "src": "@THEME_PATH@/components/_images/feature-google-fonts.png",
               "class": "card-img-top",
-              "width": 600,
-              "active": true
+              "width": 600
             },
             "iconFont": {
               "class": "mbr-iconfont mbr-iconfont-features1",
-              "link": "",
-              "size": 0
+              "linkInNewWindow": false,
+              "name": "info",
+              "family": "MobiriseIcons",
+              "link": "about.html",
+              "size": 0,
+              "newWindow": false,
+              "active": true
             }
           },
           "media4": {
             "image": {
-              "src": "@PROJECT_PATH@/assets/images/feature-websites.png",
+              "src": "@THEME_PATH@/components/_images/feature-websites.png",
               "class": "card-img-top",
-              "width": 600,
-              "active": true
+              "width": 600
             },
             "iconFont": {
               "class": "mbr-iconfont mbr-iconfont-features1",
-              "link": "",
-              "size": 0
+              "linkInNewWindow": false,
+              "name": "chat",
+              "family": "MobiriseIcons",
+              "link": "contact.html",
+              "size": 0,
+              "newWindow": false,
+              "active": true
             }
           },
           "title1": "Projects",
@@ -211,7 +227,7 @@
               "size": 0
             }
           },
-          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
+          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"index.html\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
           "_name": "ext.menu",
           "_styles": {
             ".navbar-toggler": {
@@ -313,7 +329,7 @@
               "size": 0
             }
           },
-          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
+          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"index.html\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
           "_name": "ext.menu",
           "_styles": {
             ".navbar-toggler": {
@@ -365,7 +381,7 @@
               "size": 0
             }
           },
-          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
+          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"index.html\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
           "_name": "ext.menu",
           "_anchor": "ext_menu-a",
           "_styles": {
