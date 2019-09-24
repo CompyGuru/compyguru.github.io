@@ -19,6 +19,9 @@
 #features1-8 .btn {
   font-size: 22px;
 }
+#social-buttons2-r .mbr-section-title {
+  text-align: left;
+}
 #ext_menu-c .navbar-toggler {
   color: #000;
 }
@@ -46,6 +49,9 @@
 #header3-k H3 {
   font-size: 46px;
 }
+#social-buttons2-q .mbr-section-title {
+  text-align: left;
+}
 #ext_menu-a .navbar-toggler {
   color: #000;
 }
@@ -69,4 +75,7 @@
 }
 #header3-f H3 {
   font-size: 46px;
+}
+#social-buttons2-s .mbr-section-title {
+  text-align: left;
 }
