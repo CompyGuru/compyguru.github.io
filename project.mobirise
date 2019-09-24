@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.15",
     "siteFonts": [],
-    "uniqCompNum": 14,
+    "uniqCompNum": 18,
     "versionPublish": "4.10.15",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/icons8-bot-64-64x64.png",
@@ -767,9 +767,10 @@
               "class": "card-img-top",
               "width": 600,
               "active": true,
-              "link": "",
+              "link": "page4.html",
               "alt": "",
-              "title": ""
+              "title": "",
+              "linkInNewWindow": false
             },
             "iconFont": {
               "class": "mbr-iconfont mbr-iconfont-features1",
@@ -808,6 +809,113 @@
           ],
           "_name": "features1",
           "_anchor": "features1-g"
+        }
+      ]
+    },
+    "page4.html": {
+      "settings": {
+        "title": "NXT",
+        "order": 4
+      },
+      "components": [
+        {
+          "_inherit": "menu",
+          "_params": {
+            "logo": false,
+            "showBrand": true,
+            "showButtons": false,
+            "sticky": true,
+            "collapsed": true,
+            "transparent": false,
+            "color": "#fff",
+            "hamburgerColor": "#000"
+          },
+          "buttons": "<li class=\"nav-item\"><a data-app-btn=\"parent\" class=\"btn btn-secondary-outline\" data-app-selector=\".navbar-nav .btn\" href=\"https://mobirise.com\">Download</a></li>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"parent\" class=\"nav-link\" data-app-selector=\".nav-link\" href=\"index.html\">Home</a></li><li class=\"nav-item\"><a data-app-btn=\"parent\" class=\"nav-link\" data-app-selector=\".nav-link\" href=\"projects.html\">Projects</a></li><li class=\"nav-item\"><a data-app-btn=\"parent\" class=\"nav-link\" data-app-selector=\".nav-link\" href=\"assets/files/Hamid Tahir Sample Resume.pdf\" target=\"_blank\">Resume</a></li> <li class=\"nav-item\"><a data-app-btn=\"parent\" class=\"nav-link\" data-app-selector=\".nav-link\" href=\"about.html\">About</a></li> <li class=\"nav-item\"><a data-app-btn=\"parent\" class=\"nav-link\" data-app-selector=\".nav-link\" href=\"contact.html\">Contact</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/logo.png",
+              "height": 128,
+              "alt": "Mobirise",
+              "link": "https://mobirise.com"
+            },
+            "iconFont": {
+              "class": "mbr-iconfont mbr-iconfont-menu",
+              "link": "https://mobirise.com",
+              "size": 0
+            }
+          },
+          "brand": "<a class=\"navbar-brand\" data-app-btn=\"true\" href=\"index.html\" data-app-selector=\".navbar-brand\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">Hamid Tahir</a>",
+          "_name": "ext.menu",
+          "_styles": {
+            ".navbar-toggler": {
+              "color": "#000"
+            },
+            ".navbar-brand": {
+              "font-size": "24px"
+            },
+            ".nav-link": {
+              "font-size": "18px"
+            }
+          },
+          "_anchor": "ext_menu-e"
+        },
+        {
+          "_params": {
+            "showMeta": false
+          },
+          "title": "About Me",
+          "meta": "By John Smith posted July 30, 2015",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "header3",
+          "_styles": {
+            "H3": {
+              "font-size": "46px"
+            }
+          },
+          "_anchor": "header3-f"
+        },
+        {
+          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-g"
+        },
+        {
+          "_params": {
+            "showText": true
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/img-2807-1400x933.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Exploring Europe after completing BASc degree in Mechatronics Engineering at University of Waterloo, Canada",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-h"
         }
       ]
     }
