@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "about.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.15",
     "siteFonts": [],
-    "uniqCompNum": 27,
+    "uniqCompNum": 29,
     "versionPublish": "4.10.15",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/icons8-bot-64-64x64.png",
@@ -39,6 +39,9 @@
             },
             ".mbr-section-title": {
               "font-size": "84px"
+            },
+            ".lead P": {
+              "font-size": "22px"
             }
           },
           "_params": {
@@ -294,7 +297,12 @@
             "Theme"
           ],
           "_name": "form1",
-          "_anchor": "form1-d"
+          "_anchor": "form1-d",
+          "_styles": {
+            ".mbr-section-title": {
+              "font-size": "48px"
+            }
+          }
         }
       ]
     },
@@ -362,7 +370,12 @@
             "Theme"
           ],
           "_name": "header3",
-          "_anchor": "header3-k"
+          "_anchor": "header3-k",
+          "_styles": {
+            "H3": {
+              "font-size": "46px"
+            }
+          }
         },
         {
           "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
@@ -483,7 +496,12 @@
             "Theme"
           ],
           "_name": "msg-box2",
-          "_anchor": "msg-box2-o"
+          "_anchor": "msg-box2-o",
+          "_styles": {
+            "H2": {
+              "font-size": "46px"
+            }
+          }
         },
         {
           "_params": {

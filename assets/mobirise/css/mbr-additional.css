@@ -9,6 +9,9 @@
 #msg-box3-9 .mbr-section-title {
   font-size: 84px;
 }
+#msg-box3-9 .lead P {
+  font-size: 22px;
+}
 #features1-8 H4 {
   font-family: 'Playfair Display', sans-serif;
   font-size: 30px;
@@ -25,6 +28,9 @@
 #ext_menu-c .nav-link {
   font-size: 18px;
 }
+#form1-d .mbr-section-title {
+  font-size: 48px;
+}
 #ext_menu-b .navbar-toggler {
   color: #000;
 }
@@ -34,6 +40,9 @@
 #ext_menu-b .nav-link {
   font-size: 18px;
 }
+#header3-k H3 {
+  font-size: 46px;
+}
 #ext_menu-a .navbar-toggler {
   color: #000;
 }
@@ -42,4 +51,7 @@
 }
 #ext_menu-a .nav-link {
   font-size: 18px;
+}
+#msg-box2-o H2 {
+  font-size: 46px;
 }
