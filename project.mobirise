@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "index.html",
+    "currentPage": "contact.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -258,7 +258,7 @@
             "overlayOpacity": 0.5
           },
           "title": "Contact Form",
-          "buttons": "<a data-app-btn=\"true\" type=\"submit\" class=\"btn btn-secondary-outline\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">Contact Us</a>",
+          "buttons": "<a data-app-btn=\"true\" type=\"submit\" class=\"btn btn-secondary-outline\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">Contact</a>",
           "form": {
             "action": "hamidtahir@gmail.com",
             "alerts": {
