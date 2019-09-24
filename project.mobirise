@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "projects.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -75,9 +75,9 @@
         {
           "_params": {
             "showImages": true,
-            "showTitles": false,
+            "showTitles": true,
             "showCaptions": false,
-            "showButtons": true,
+            "showButtons": false,
             "paddingTop": "2",
             "paddingBottom": "2",
             "columns": 4,
