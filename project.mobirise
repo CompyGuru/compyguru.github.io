@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "index.html",
+    "currentPage": "about.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -365,35 +365,38 @@
           "_anchor": "header3-k"
         },
         {
-          "_params": {
-            "showText": true
-          },
-          "media": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/photo-13.jpg",
-              "width": 1400
-            },
-            "video": {
-              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
-            }
-          },
-          "text": "Create awesome mobile-friendly websites. No coding and free.",
-          "alias": "purity/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "image2",
-          "_anchor": "image2-m"
-        },
-        {
-          "text": "<p>Make your own website in a few clicks! Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. MobiRise Website Builder creates responsive, retina and mobile friendly websites in a few clicks. Mobirise is one of the easiest website development tools available today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.</p>",
+          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
           ],
           "_name": "content1",
           "_anchor": "content1-l"
+        },
+        {
+          "_params": {
+            "showText": true
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/img-2807-1400x933.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Exploring Europe after completing BASc degree in Mechatronics Engineering at University of Waterloo, Canada",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-m"
         }
       ]
     },
