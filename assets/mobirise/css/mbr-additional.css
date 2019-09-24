@@ -31,6 +31,9 @@
 #form1-d .mbr-section-title {
   font-size: 48px;
 }
+#social-buttons2-m .mbr-section-title {
+  text-align: left;
+}
 #ext_menu-b .navbar-toggler {
   color: #000;
 }
