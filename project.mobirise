@@ -264,7 +264,7 @@
             "overlayOpacity": 0.5
           },
           "title": "Contact Me",
-          "buttons": "<a data-app-btn=\"true\" type=\"submit\" class=\"btn btn-secondary-outline\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">Contact</a>",
+          "buttons": "<a data-app-btn=\"true\" type=\"submit\" class=\"btn btn-secondary-outline\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">Send Email</a>",
           "form": {
             "action": "hamidtahir@gmail.com",
             "alerts": {
