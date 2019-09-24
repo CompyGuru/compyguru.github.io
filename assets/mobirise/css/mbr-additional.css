@@ -20,17 +20,26 @@
   color: #000;
 }
 #ext_menu-c .navbar-brand {
-  font-size: 22px;
+  font-size: 24px;
+}
+#ext_menu-c .nav-link {
+  font-size: 18px;
 }
 #ext_menu-b .navbar-toggler {
   color: #000;
 }
 #ext_menu-b .navbar-brand {
-  font-size: 22px;
+  font-size: 24px;
+}
+#ext_menu-b .nav-link {
+  font-size: 18px;
 }
 #ext_menu-a .navbar-toggler {
   color: #000;
 }
 #ext_menu-a .navbar-brand {
-  font-size: 22px;
+  font-size: 24px;
+}
+#ext_menu-a .nav-link {
+  font-size: 18px;
 }

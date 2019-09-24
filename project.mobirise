@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "index.html",
+    "currentPage": "projects.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -238,7 +238,10 @@
               "color": "#000"
             },
             ".navbar-brand": {
-              "font-size": "22px"
+              "font-size": "24px"
+            },
+            ".nav-link": {
+              "font-size": "18px"
             }
           },
           "_anchor": "ext_menu-c"
@@ -340,7 +343,10 @@
               "color": "#000"
             },
             ".navbar-brand": {
-              "font-size": "22px"
+              "font-size": "24px"
+            },
+            ".nav-link": {
+              "font-size": "18px"
             }
           },
           "_anchor": "ext_menu-b"
@@ -393,7 +399,10 @@
               "color": "#000"
             },
             ".navbar-brand": {
-              "font-size": "22px"
+              "font-size": "24px"
+            },
+            ".nav-link": {
+              "font-size": "18px"
             }
           }
         },
