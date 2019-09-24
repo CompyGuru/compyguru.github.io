@@ -527,7 +527,7 @@
           },
           "media1": {
             "image": {
-              "src": "@PROJECT_PATH@/assets/images/bev-short-600x377.png",
+              "src": "@PROJECT_PATH@/assets/images/ue4-bg-pic-506x316.png",
               "class": "card-img-top",
               "width": 600,
               "active": true,
