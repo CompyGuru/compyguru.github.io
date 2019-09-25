@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.15",
     "siteFonts": [],
-    "uniqCompNum": 27,
+    "uniqCompNum": 28,
     "versionPublish": "4.10.15",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/icons8-bot-64-64x64.png",
@@ -4488,7 +4488,7 @@
           "_anchor": "header3-21"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>I use the Hand-Eye calibration method to calibrate the vehicle mounted GPS/IMU system with a LIDAR and a camera. The principle of the method is shown in the image below. For the case of a camera, various poses of a chessboard are collected as the vehicle is moved to different locations. Various GPS poses are also recorded. Then the geometry of the setup can be utilized and the equation AX = XB can be written and solved for X, the transformation between the GPS reference and the mounting location of the camera.&nbsp;</p><p>For the case of the LIDAR, the ICP algorithm is used in order to obtain the poses of the LIDAR detections and is explained as a separate project. To solve the equation, I used Google's Ceres Solver optimization library in order to simultaneously solve for the rotational and translational components of X.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -4520,6 +4520,15 @@
           ],
           "_name": "image2",
           "_anchor": "image2-23"
+        },
+        {
+          "text": "<p>The developed platform is driven in a series of maneuvers while recording LIDAR and navigation data for performing the calibration. The figure below shows the navigation system position of the vehicle in blue and the same data extracted from the LIDAR point clouds using the implemented ICP algorithm. The vehicle is driven very slowly to remove motion effects. It can be seen that the odometry from the ICP algorithm is not as accurate as that from the navigation system.&nbsp;</p><p>The ICP algorithm is subjective to measurement errors from the LIDAR sensor. Since each point can have error in its position, the overall result of the ICP algorithm can never be perfect. Furthermore, ICP matching becomes worse when there is significant motion between the two frames or when the position of the LIDAR changes too much between frames. Both of these scenarios result in points that do not correspond to points in the second frame and can result in false correspondences to be found. Another reason why ICP fails to perform well if there are not many usable feature points in the respective point clouds. Having a lot of infrastructure and buildings in the surroundings tended to result in more accurate point cloud matching.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-r"
         },
         {
           "_params": {
