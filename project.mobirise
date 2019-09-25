@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "page10.html",
+    "currentPage": "page8.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.15",
     "siteFonts": [],
-    "uniqCompNum": 28,
+    "uniqCompNum": 34,
     "versionPublish": "4.10.15",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/icons8-bot-64-64x64.png",
@@ -983,10 +983,10 @@
         },
         {
           "_params": {
-            "showMeta": false
+            "showMeta": true
           },
           "title": "NXT Domino Laying Robot",
-          "meta": "By John Smith posted July 30, 2015",
+          "meta": "2012",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -1000,7 +1000,7 @@
           "_anchor": "header3-f"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>This the final project for our first semester in Mechatronics. We had the choice of building any robot using the Lego NXT Kit and we decided on building a dominoes laying robot to maximize the satisfaction of toppling dominoes without the pain of erecting them again. The robot uses a PID controller to follow a black line on the ground to place the dominoes. Obstacle avoidance was also built in. The whole system uses three motors. Two for driving and one for laying dominoes. The dominoes are gravity fed, and a reciprocal motion lays the dominoes.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -1456,10 +1456,10 @@
         },
         {
           "_params": {
-            "showMeta": false
+            "showMeta": true
           },
           "title": "Rescue Robot Competition",
-          "meta": "By John Smith posted July 30, 2015",
+          "meta": "2016",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -1473,7 +1473,7 @@
           "_anchor": "header3-y"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>This is a project for our MTE380 Mechatronics Engineering Design Workshop course. The objective is to send a rescue robot from a base on one side of the “mountain” to a location on the other side of the “mountain” marked by a pole. The “mountain” is a piece of plywood with a ramp on one side and a sheet metal covered section on the other. Our solution to this problem was a lift that carried a small robot over the top and release it on the other side. The lift is controlled by a simple logic circuit with limit switches eliminating the need for a microcontroller. The small robot used a laser range finder to locate the base and uses encoders on both wheels to ensure straight travel.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -1923,10 +1923,10 @@
         },
         {
           "_params": {
-            "showMeta": false
+            "showMeta": true
           },
           "title": "ADAS Stereo Camera System",
-          "meta": "By John Smith posted July 30, 2015",
+          "meta": "2017",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -1940,7 +1940,7 @@
           "_anchor": "header3-17"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>This is our fourth year design project. The objective of this project is to design a prototype stereo camera system that provides depth information for use in Advance Driver Assistance Systems(ADAS).\n</p><p>Assuming perfect matching between the stereo images, accuracy in stereo systems decreases quadratically with distance due to the fact pixels are discrete. In addition, distance can only be triangulated in the regions of the image where two cameras have overlapping field of view. Accuracy can be increased in two ways: increase the baseline distance between two stereo cameras or decrease the cameras’ field of view (FOV). Both of which decreases the overlapping region, thus increasing the minimum distance where detection is possible.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -1972,6 +1972,15 @@
           ],
           "_name": "image2",
           "_anchor": "image2-19"
+        },
+        {
+          "text": "<p>We attempted to solve this problem by using a duo-baseline setup with three cameras. One baseline is between the outermost cameras at a distance of 0.6 meters which provides the greatest accuracy, but it only works at longer distances. The other baseline is 0.2 meters between the two cameras on the left which is used for close range. We chose 1.3MP USB3 global shutter cameras from Point Grey, a NVIDIA Jetson TX1 for processing. In addition, we designed custom PCBs for supplying power and provide hardware synchronization for the cameras.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-s"
         },
         {
           "_params": {
@@ -2042,6 +2051,15 @@
           ],
           "_name": "gallery2",
           "_anchor": "gallery2-o"
+        },
+        {
+          "text": "<p>The camera system is calibrated for lens distortions as well and the position and orientations between cameras. Then, stereo images from two baselines are matched to generate a depth image. We selected Semi-Global Matching (SGM) on the Jetson TX1 GPU for stereo matching. SGM offers a good trade off between speed and accuracy. Finally, depth from the two baselines are fused according to their optimal distances.\r</p><p>We tested the stereo camera system on a car by mounting it behind the windshield and drove the car around the university. Note that the project focused on generating depth information, the car and pedestrian detections were added last minute addition to demo how the depth information could be used, and thus there are lots of false detection. The depth results are not very good around the edges due to calibration and cheap low quality lens ($7 each) we used.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-t"
         },
         {
           "_params": {
@@ -2469,10 +2487,10 @@
         },
         {
           "_params": {
-            "showMeta": false
+            "showMeta": true
           },
           "title": "Deep Learning LIDAR Odometry",
-          "meta": "By John Smith posted July 30, 2015",
+          "meta": "2018",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -2486,7 +2504,7 @@
           "_anchor": "header3-1d"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>I worked on this as my Deep Learning course project. Traditional Lidar Odometry is incredibly difficult due to factors such as motion distortion, occlusions, laser beam divergence, and others. Instead of manually modelling these difficult scenarios, data driven methods such as deep learning can be used.\n</p><p>The idea stemmed from a paper published in The International Journal of Robotics Research (IJRR) [1]. In this paper, they used a convolutional-recurrent neural network architecture to learn visual odometry. The architecture allows the network to learn system dynamics and propagate states through multiple time steps. We modified this architecture for Lidar Odometry.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -2518,6 +2536,15 @@
           ],
           "_name": "image2",
           "_anchor": "image2-1f"
+        },
+        {
+          "text": "<p>We used Lidar data from the KITTI dataset which uses a 64 beam Velodyne Lidar. The Lidar data is preprocessed into images. Each row of the image ecnodes a single laser beam, and each column encodes different azimuth angle. The distance and intensity data are stacked as two channels of an image. The sequence of images are passed into the network, and at the output are Lidar poses. The details regarding this project can be seen in the report.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-u"
         },
         {
           "_params": {
@@ -2620,56 +2647,58 @@
           "_anchor": "image2-k"
         },
         {
-          "_params": {
-            "showText": false
-          },
-          "media": {
-            "image": {
-              "src": "@PROJECT_PATH@/assets/images/03-640x480.jpg",
-              "width": 1400,
-              "link": "",
-              "alt": "",
-              "title": "",
-              "active": true
-            },
-            "video": {
-              "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
-              "autoplay": false,
-              "loop": false
-            }
-          },
-          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "text": "<p>The network is trained with frame to frame loss as well as loss for the image sequence. The network is able to converge and some of the odometry results can be seen below. The results are not as good as some of the classical methods such as LOAM [2], but we showed that neural networks are capable to estimate odometry from Lidar and we are excited to keep improving our results.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
           ],
-          "_name": "image2",
-          "_anchor": "image2-1g"
+          "_name": "content1",
+          "_anchor": "content1-v"
         },
         {
+          "_inherit": "gallery1",
           "_params": {
-            "showText": false
+            "showBullets": true,
+            "images": [
+              {
+                "image": "@PROJECT_PATH@/assets/images/03-1-640x480.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/03-1-640x480-640x480.jpg",
+                "alt": "",
+                "title": "",
+                "active": true
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/06-640x480.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/06-640x480-640x480.jpg",
+                "alt": "",
+                "title": "",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/07-1-640x480.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/07-1-640x480-640x480.jpg",
+                "alt": "",
+                "title": "",
+                "active": false
+              }
+            ]
           },
-          "media": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/07-640x480.jpg",
-              "width": 1400,
-              "link": "",
-              "alt": "",
-              "title": ""
-            },
-            "video": {
-              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
-            }
-          },
-          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "articleLayout": true,
           "alias": "purity/components",
           "_tags": [
             "Theme"
           ],
-          "_name": "image2",
-          "_anchor": "image2-i"
+          "_name": "gallery2",
+          "_anchor": "gallery2-x"
+        },
+        {
+          "text": "<p>[1] S. Wang, R. Clark, H. Wen, and N. Trigoni, “End-to-end, sequence- to-sequence probabilistic visual odometry through deep neural net- works,” The International Journal of Robotics Research, vol. 0, no. 0, p. 0278364917734298, 0.\r</p><p>[2] J. Zhang and S. Singh, “Loam: Lidar odometry and mapping in real- time,” in Robotics: Science and Systems Conference, July 2014.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-w"
         },
         {
           "_params": {

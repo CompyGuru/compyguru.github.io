@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3 class="mbr-section-title display-4">ADAS Stereo Camera System</h3>
-                
+                <small>2017</small>
             </div>
         </div>
     </div>
@@ -69,7 +69,8 @@
 <section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-18" data-rv-view="166">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 lead"><p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style="font-size: 1.25rem;">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p></div>
+            <div class="col-md-8 col-md-offset-2 lead"><p>This is our fourth year design project. The objective of this project is to design a prototype stereo camera system that provides depth information for use in Advance Driver Assistance Systems(ADAS).
+</p><p>Assuming perfect matching between the stereo images, accuracy in stereo systems decreases quadratically with distance due to the fact pixels are discrete. In addition, distance can only be triangulated in the regions of the image where two cameras have overlapping field of view. Accuracy can be increased in two ways: increase the baseline distance between two stereo cameras or decrease the cameras’ field of view (FOV). Both of which decreases the overlapping region, thus increasing the minimum distance where detection is possible.</p></div>
         </div>
     </div>
 </section>
@@ -85,6 +86,14 @@
                     </figcaption>
                 </figure>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-s" data-rv-view="384">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 lead"><p>We attempted to solve this problem by using a duo-baseline setup with three cameras. One baseline is between the outermost cameras at a distance of 0.6 meters which provides the greatest accuracy, but it only works at longer distances. The other baseline is 0.2 meters between the two cameras on the left which is used for close range. We chose 1.3MP USB3 global shutter cameras from Point Grey, a NVIDIA Jetson TX1 for processing. In addition, we designed custom PCBs for supplying power and provide hardware synchronization for the cameras.</p></div>
         </div>
     </div>
 </section>
@@ -171,6 +180,15 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-t" data-rv-view="385">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 lead"><p>The camera system is calibrated for lens distortions as well and the position and orientations between cameras. Then, stereo images from two baselines are matched to generate a depth image. We selected Semi-Global Matching (SGM) on the Jetson TX1 GPU for stereo matching. SGM offers a good trade off between speed and accuracy. Finally, depth from the two baselines are fused according to their optimal distances.
+</p><p>We tested the stereo camera system on a car by mounting it behind the windshield and drove the car around the university. Note that the project focused on generating depth information, the car and pedestrian detections were added last minute addition to demo how the depth information could be used, and thus there are lots of false detection. The depth results are not very good around the edges due to calibration and cheap low quality lens ($7 each) we used.</p></div>
         </div>
     </div>
 </section>

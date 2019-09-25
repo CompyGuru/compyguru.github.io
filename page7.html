@@ -10,8 +10,8 @@
   <meta name="description" content="">
   
   <title>LO</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin,cyrillic">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&subset=latin,vietnamese,latin-ext">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin,cyrillic">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/socicon/css/socicon.min.css">
@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3 class="mbr-section-title display-4">Deep Learning LIDAR Odometry</h3>
-                
+                <small>2018</small>
             </div>
         </div>
     </div>
@@ -69,7 +69,8 @@
 <section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-1e" data-rv-view="136">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 lead"><p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style="font-size: 1.25rem;">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p></div>
+            <div class="col-md-8 col-md-offset-2 lead"><p>I worked on this as my Deep Learning course project. Traditional Lidar Odometry is incredibly difficult due to factors such as motion distortion, occlusions, laser beam divergence, and others. Instead of manually modelling these difficult scenarios, data driven methods such as deep learning can be used.
+</p><p>The idea stemmed from a paper published in The International Journal of Robotics Research (IJRR) [1]. In this paper, they used a convolutional-recurrent neural network architecture to learn visual odometry. The architecture allows the network to learn system dynamics and propagate states through multiple time steps. We modified this architecture for Lidar Odometry.</p></div>
         </div>
     </div>
 </section>
@@ -85,6 +86,14 @@
                     </figcaption>
                 </figure>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-u" data-rv-view="386">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 lead"><p>We used Lidar data from the KITTI dataset which uses a 64 beam Velodyne Lidar. The Lidar data is preprocessed into images. Each row of the image ecnodes a single laser beam, and each column encodes different azimuth angle. The distance and intensity data are stacked as two channels of an image. The sequence of images are passed into the network, and at the output are Lidar poses. The details regarding this project can be seen in the report.</p></div>
         </div>
     </div>
 </section>
@@ -149,32 +158,83 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-1g" data-rv-view="139">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-v" data-rv-view="387">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <figure class="mbr-figure">
-                    <div><img src="assets/images/03-640x480.jpg"></div>
-                    <figcaption class="mbr-figure-caption mbr-figure-caption-over">
-                        
-                    </figcaption>
-                </figure>
+            <div class="col-md-8 col-md-offset-2 lead"><p>The network is trained with frame to frame loss as well as loss for the image sequence. The network is able to converge and some of the odometry results can be seen below. The results are not as good as some of the classical methods such as LOAM [2], but we showed that neural networks are capable to estimate odometry from Lidar and we are excited to keep improving our results.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-section__container mbr-section__container--middle" id="gallery2-x" data-rv-view="389">
+    <!-- Gallery -->
+    <div class=" container">
+        <div class=" mbr-gallery-layout-article row">
+            <div class=" col-md-offset-2 col-md-8">
+                <div>
+                    <div class="mbr-gallery-item">
+                        <a data-toggle="modal" href="#lb-gallery2-x" data-slide-to="0">
+                            <img src="assets/images/03-1-640x480-640x480.jpg" alt="" title="">
+                            <span class="icon fa fa-search-plus"></span>
+                        </a>
+                    </div><div class="mbr-gallery-item">
+                        <a data-toggle="modal" href="#lb-gallery2-x" data-slide-to="1">
+                            <img src="assets/images/06-640x480-640x480.jpg" alt="" title="">
+                            <span class="icon fa fa-search-plus"></span>
+                        </a>
+                    </div><div class="mbr-gallery-item">
+                        <a data-toggle="modal" href="#lb-gallery2-x" data-slide-to="2">
+                            <img src="assets/images/07-1-640x480-640x480.jpg" alt="" title="">
+                            <span class="icon fa fa-search-plus"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery2-x">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ol class="carousel-indicators">
+                        <li data-app-prevent-settings="" data-target="#lb-gallery2-x" class=" active" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#lb-gallery2-x" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#lb-gallery2-x" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/03-1-640x480.jpg" alt="" title="">
+                        </div><div class="carousel-item">
+                            <img src="assets/images/06-640x480.jpg" alt="" title="">
+                        </div><div class="carousel-item">
+                            <img src="assets/images/07-1-640x480.jpg" alt="" title="">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" role="button" data-slide="prev" href="#lb-gallery2-x">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" role="button" data-slide="next" href="#lb-gallery2-x">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <a class="close" href="#" role="button" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--last" id="image2-i" data-rv-view="152">
+<section class="mbr-section mbr-section__container mbr-section__container--last" id="content1-w" data-rv-view="388">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <figure class="mbr-figure">
-                    <div><img src="assets/images/07-640x480.jpg"></div>
-                    <figcaption class="mbr-figure-caption mbr-figure-caption-over">
-                        
-                    </figcaption>
-                </figure>
-            </div>
+            <div class="col-md-8 col-md-offset-2 lead"><p>[1] S. Wang, R. Clark, H. Wen, and N. Trigoni, “End-to-end, sequence- to-sequence probabilistic visual odometry through deep neural net- works,” The International Journal of Robotics Research, vol. 0, no. 0, p. 0278364917734298, 0.
+</p><p>[2] J. Zhang and S. Singh, “Loam: Lidar odometry and mapping in real- time,” in Robotics: Science and Systems Conference, July 2014.</p></div>
         </div>
     </div>
 </section>
@@ -314,7 +374,11 @@
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/masonry/masonry.pkgd.min.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
   <script src="assets/puritym/js/script.js"></script>
+  <script src="assets/mobirise-gallery/script.js"></script>
   
   
 </body>
