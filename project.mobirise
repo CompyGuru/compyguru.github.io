@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "jointcalibration.html",
+    "currentPage": "infrastructurecalib.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.15",
     "siteFonts": [],
-    "uniqCompNum": 34,
+    "uniqCompNum": 38,
     "versionPublish": "4.10.15",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/icons8-bot-64-64x64.png",
@@ -2451,7 +2451,7 @@
           "_anchor": "header3-1p"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>This calibration technique is based on the method provided in [1]. It is used to jointly calibrate sensors or groups of sensors that can measure the 3D position of a common target and have a shared field of view. For example, using the proposed method, a stereo camera system may be calibrated with a 3D LIDAR sensor. The result of the calibration will be the 3D rigid body transformation that should be applied to one of the sensor or sensor groups in order to have its detections represented in the other's coordinate system. The calibration is performed as follows. First, a calibration target is designed that is capable of being detected well by each sensor. Then, the target is placed at different positions in the overlapping field of view and measurements of the position of the target are taken by each sensor. Alternatively, the target could be fixed in place and the vehicle moved. It is simplest to take measurements when both the vehicle and target are stationary, so that error is not introduced by motion occurring between the capture times of different sensors. Finally, an objective function is minimized to solve for all the homogeneous transformation matrices required. I used this method to jointly calibrate the front radar, Mobileye camera and the LIDAR mounted on the developed vehicle shown below.</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -2485,6 +2485,15 @@
           "_anchor": "image2-1r"
         },
         {
+          "text": "<p>One simple way to test for correct calibration is to apply the transformation obtained in RVIZ and transform two of the sensors' detections into the frame of the third detection. In this case, the camera and radar detections are transformed into the LIDAR coordinate frame. The image below shows the alignment of the detections after the transformations are applied. It can be observed that there is some error present since the points do no completely align, but a decently accurate transformation is obtained.</p><p>There are various causes for errors present in this calibration. First, at the sensor level, each of the sensors have a measurement accuracy that is built into the measurements. There is no way to obtain a more accurate measurement unless more advance and expensive sensors are used. From the corresponding data sheets, the approximate measurement accuracies of the LIDAR, radar, and Mobileye sensors used are 0.02 m, 0.1 m, and 2 m respectively. The accuracies presented pertain to the maximum distance of the calibration target during calibration. Generally, these measurement noises get worse with distance. Therefore, it is a good idea not to set the calibration target too far from the vehicle. Moreover, error is added into the system during the point selection stage. Ideally, the exact same point on the calibration target is measured by all three sensors. In reality, it is not known what point on the calibration target the Mobileye actually measures, whether it is the center or a corner of the bounding box of the pedestrian detection or some other arbitrary point. Next, the radar reflector is made sufficiently large to provide a strong reflected signal, however this also means that the radar is not detecting the exact center of the reflector all the time. Lastly, the LIDAR point pertaining to the center of the radar reflector is selected manually. However, since the LIDAR point cloud is of a fixed density, the exact center point of the reflector may not be picked up, especially as the target gets further away from the LIDAR. Therefore, the next closest point is selected, but error is introduced into the selection.&nbsp;</p><p><span style=\"font-size: 1.25rem;\">These sources of errors result in the calibration to be non ideal. Improvements can be made as follows. First, a machine vision camera could replace the Mobileye unit. When the raw image of the camera is available, a specialized chessboard pattern can be detected with a much higher accuracy as that coming from the Mobileye sensor. Not only that, the machine vision camera will also provide the height of the target point that will ensure some of the data is not compromised. The radar reflector design should be optimized between reflection strength and size. If the calibration is performed in a special area devoid of other objects that can be detected by the radar, the radar reflector can be made significantly smaller, thus providing a more consistent localization for the measurements as the target is moved. Finally, a LIDAR system that provides a denser pointcloud can be used so that the point selection becomes more accurate. Furthermore, interpolation techniques between LIDAR points would greatly help in allowing the selection of the point at the middle of the radar reflector.</span><br></p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-y"
+        },
+        {
           "_params": {
             "showText": false
           },
@@ -2510,6 +2519,15 @@
           ],
           "_name": "image2",
           "_anchor": "image2-1s"
+        },
+        {
+          "text": "<p>&nbsp;[1] Q. V. Le and A. Y. Ng, “Joint calibration of multiple sensors,” in2009  IEEE/RSJ International  Conference  on  Intelligent  Robots  and  Systems,  pp.  3651–3658,  IEEE,2009</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-z"
         },
         {
           "_params": {
@@ -2927,7 +2945,7 @@
           "_anchor": "header3-1j"
         },
         {
-          "text": "<p>I completed my MASc degree in 2019 in Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. For this degree, my research spanned all areas of autonomous vehicle development including sensor interfacing and calibration as well as intelligent algorithms for self driving and related tasks. &nbsp;Prior to this, I&nbsp;<span style=\"font-size: 1.25rem;\">completed my BASc degree in 2017 in Mechatronics Engineering. My work focuses on Mobile Robotics and Autonomous Vehicle development and spans the fields of computer vision, controls, planning and simulation.</span></p>",
+          "text": "<p>One of the features of autonomous vehicles is the ability to interface with infrastructure mounted sensors to acquire additional information about the environment. Knowing the location of the infrastructure sensor is useful in localizing the information attained. A simple and effective way to do this is to know the GPS location, latitude and longitude, of all relevant infrastructure sensors so that the received data can be localized with respect to the GPS system on the developed platform.</p><p>Since the coordinate systems for both the infrastructure sensor and the GPS sensor mounted on the vehicle are stationary, the motion of the vehicle does not affect the transformation between them. Therefore, the technique used in the Heterogeneous Joint Calibration project can be used once again in the exact same way. Moreover, a similar approach to the calibration target design is employed. The target, detected by the infrastructure sensor, should be mounted at the location of the GPS reference point so that both sensors are measuring the position of the same point.&nbsp;</p><p>The calibration procedure is to drive the vehicle in a path that excites all the translation and rotation degrees of freedom and take measurements from both sensors at the exact same time. The simplest way to do this is to stop the vehicle when taking the measurement, but time synchronization and triggering of the sensors may also be employed. If the road surface does not allow the vehicle to excite all the degrees of freedom, an alternative is to mount the targets on a mechanical platform that can independently incur these motions on the targets.</p><p>I use the Prescan simulation software to test this calibration. A simple intersection that I made with the software can be seen in the image below. Prescan allows for simulation of autonomous driving sensors in addition to all the regular features of softwares like CARSIM.&nbsp;</p>",
           "alias": "purity/components",
           "_tags": [
             "Theme"
@@ -2961,6 +2979,15 @@
           "_anchor": "image2-1l"
         },
         {
+          "text": "<p>The setup for the calibration between an infrastructure mounted vision sensor and a GPS is shown in the image below. A calibration chessboard is mounted on the roof of the vehicle and one of the corners of the chessboard is overlapped with the GPS reference point. This is the point on the vehicle that the GPS device measures the latitude and longitude of. Any infrastructure sensor that measures the 3D position of a target may be used, but the example uses a camera since this is the most common. The chessboard is mounted on a mechanical platform that provides sinusoidal oscillations along the roll and pitch axis of the chessboard as well as translation in the vertical direction. These, coupled with the planar translations and yaw motion of the vehicle itself, ensure that all the degrees of freedom are excited as measurements are taken. When all the degrees of freedom are excited, 3D homogeneous transformation matrix can be fully resolved. The yellow trajectory shows the path that the vehicle will take. The camera is mounted on the light post and its field of view is shown on the road.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-10"
+        },
+        {
           "_params": {
             "showText": false
           },
@@ -2986,6 +3013,15 @@
           ],
           "_name": "image2",
           "_anchor": "image2-1m"
+        },
+        {
+          "text": "<p>To measure the calibration error, the camera location with respect to the global GPS coordinate frame can be obtained using the solved transformation by transforming the point [0, 0, 0] to the GPS coordinate frame. Then, the resulting coordinates can be subtracted from the known setup coordinates to find the error along each of the x, y, and z axis. Finally, the mean error can be calculated from these three axial errors. The axial errors are 0.1361 m, 0.3316 m, and 0.0267 m along the x, y, and z axis, respectively. The average of these errors is 0.1648 m.&nbsp;</p><p>Since, in the simulation environment the GPS measurement is completely error free, the main cause of error is the camera measurements. Since the calibration chessboard is far from the mounting location of the camera, the chessboard corners cannot be determined to a very high level of accuracy. That is to say, that the error can be reduced as the size of the chessboard is increased or the camera is mounted closer to the vehicle. That being said, the mounting height of the camera is strategic for other reasons and cannot be changed just for a better calibration. Moreover, in a real world GPS system, there is error present in the GPS measurement and so the calibration will be worse than it is in the simulation. Furthermore, it is difficult in the real world to mount a target at the exact GPS reference point. Instead, the target will be mounted at some arbitrary and easy to mount location, but the transformation will be measured. Then the transformed point may be calibrated to obtain the same result, however the measurement error in the transformation will also affect the accuracy of the results.</p>",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-11"
         },
         {
           "_params": {
