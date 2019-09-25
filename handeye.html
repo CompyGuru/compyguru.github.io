@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.10.15, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.10.15, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/icons8-bot-64-64x64.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  <title>HandEye Calibration</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&subset=latin,vietnamese,latin-ext">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/socicon.min.css">
+  <link rel="stylesheet" href="assets/puritym/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148613298-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148613298-1');
+</script>
+
+<!-- /Google Analytics -->
+
+
+  <nav class="navbar navbar-light mbr-navbar navbar-fixed-top" id="ext_menu-20" data-rv-view="52" style="background-color: rgb(255, 255, 255);">
+    <div class="container">
+        <button class="navbar-toggler pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+            <div class="hamburger-icon"></div>
+        </button>
+
+        <div class="clearfix"></div>
+        <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
+            
+            <span><a class="navbar-brand" href="index.html">Hamid Tahir</a></span>
+
+            
+
+            <ul class="nav navbar-nav pull-xs-right"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="assets/files/Hamid_Resume_2019.pdf" target="_blank">Resume</a></li> <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul>
+        </div>
+    </div>
+</nav>
+
+<section class="mbr-section mbr-section__container mbr-after-navbar mbr-section__container--first" id="header3-21" data-rv-view="54">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 class="mbr-section-title display-4">Hand-Eye Calibration<br></h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-22" data-rv-view="56">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 lead"><p>I use the Hand-Eye calibration method to calibrate the vehicle mounted GPS/IMU system with a LIDAR and a camera. The principle of the method is shown in the image below. For the case of a camera, various poses of a chessboard are collected as the vehicle is moved to different locations. Various GPS poses are also recorded. Then the geometry of the setup can be utilized and the equation AX = XB can be written and solved for X, the transformation between the GPS reference and the mounting location of the camera.&nbsp;</p><p>For the case of the LIDAR, the ICP algorithm is used in order to obtain the poses of the LIDAR detections and is explained as a separate project. To solve the equation, I used Google's Ceres Solver optimization library in order to simultaneously solve for the rotational and translational components of X.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-23" data-rv-view="57">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <figure class="mbr-figure">
+                    <div><img src="assets/images/gps-cam-handeye-fig-724x794.png"></div>
+                    <figcaption class="mbr-figure-caption mbr-figure-caption-over">
+                        
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-r" data-rv-view="347">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 lead"><p>The developed platform is driven in a series of maneuvers while recording LIDAR and navigation data for performing the calibration. The figure below shows the navigation system position of the vehicle in blue and the same data extracted from the LIDAR point clouds using the implemented ICP algorithm. The vehicle is driven very slowly to remove motion effects. It can be seen that the odometry from the ICP algorithm is not as accurate as that from the navigation system.&nbsp;</p><p>The ICP algorithm is subjective to measurement errors from the LIDAR sensor. Since each point can have error in its position, the overall result of the ICP algorithm can never be perfect. Furthermore, ICP matching becomes worse when there is significant motion between the two frames or when the position of the LIDAR changes too much between frames. Both of these scenarios result in points that do not correspond to points in the second frame and can result in false correspondences to be found. Another reason why ICP fails to perform well if there are not many usable feature points in the respective point clouds. Having a lot of infrastructure and buildings in the surroundings tended to result in more accurate point cloud matching.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section__container mbr-section__container--last" id="image2-24" data-rv-view="59">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <figure class="mbr-figure">
+                    <div><img src="assets/images/handeye-motion-676x491.png"></div>
+                    <figcaption class="mbr-figure-caption mbr-figure-caption-over">
+                        
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section-small" id="social-buttons2-25" data-rv-view="61" style="background-color: rgb(255, 248, 224); padding-top: 3rem; padding-bottom: 3rem;">
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 class="mbr-section-title h1">Connect With Me</h2>
+            </div>
+            <div class="col-sm-8 text-xs-right">       <a class="btn btn-social socicon-bg-linkedin" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/hamid-tahir-a7142530/"><i class="socicon socicon-linkedin"></i></a> </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section-small" id="features1-2j" data-rv-view="63" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page12.html"><img src="assets/images/ue4-bg-pic-506x316.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Lane Keeping</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page11.html"><img src="assets/images/gps-cam-handeye-fig-600x377.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Hand-Eye Calibration</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page10.html"><img src="assets/images/icp-results-600x377.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">ICP Pointcloud Matching</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section-small" id="features1-2k" data-rv-view="66" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page9.html"><img src="assets/images/thumb-hetero-600x377.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Heterogeneous Joint Calibration</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page8.html"><img src="assets/images/calibrationtargetimage-w-path-498x312.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Infrastructure Sensor and GPS Calibration</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page7.html"><img src="assets/images/thumb-379x237.jpg" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Deep Learning LIDAR Odometry</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section-small" id="features1-2l" data-rv-view="69" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page6.html"><img src="assets/images/thumb-stereo-379x237.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">ADAS Stereo Camera System</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page5.html"><img src="assets/images/thumb-rescue-378x237.jpg" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Rescue Robot Competition</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div><a href="page4.html"><img src="assets/images/thumb-nxt-379x237.png" class="card-img-top"></a></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">NXT Domino Laying Robot</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/puritym/js/script.js"></script>
+  
+  
+</body>
+</html>
