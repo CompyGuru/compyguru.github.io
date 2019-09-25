@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "portfolio",
-    "currentPage": "index.html",
+    "currentPage": "page4.html",
     "theme": {
       "name": "purity",
       "title": "PurityM",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.15",
     "siteFonts": [],
-    "uniqCompNum": 109,
+    "uniqCompNum": 25,
     "versionPublish": "4.10.15",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/icons8-bot-64-64x64.png",
@@ -931,7 +931,7 @@
     "page4.html": {
       "settings": {
         "title": "NXT",
-        "order": 4
+        "order": 12
       },
       "components": [
         {
@@ -1404,7 +1404,7 @@
     "page5.html": {
       "settings": {
         "title": "Rescue",
-        "order": 12
+        "order": 11
       },
       "components": [
         {
@@ -1871,7 +1871,7 @@
     "page6.html": {
       "settings": {
         "title": "Stereo",
-        "order": 11
+        "order": 10
       },
       "components": [
         {
@@ -1955,7 +1955,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/baselines-551x317.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -1979,14 +1979,17 @@
           },
           "media": {
             "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
+              "src": "@PROJECT_PATH@/assets/images/in-car-setup-815x263.png",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": "",
+              "active": true
             },
             "video": {
               "src": "https://www.youtube.com/watch?v=QeNomStHLy8",
               "autoplay": false,
-              "loop": false,
-              "active": true
+              "loop": false
             }
           },
           "text": "Create awesome mobile-friendly websites. No coding and free.",
@@ -1996,6 +1999,76 @@
           ],
           "_name": "image2",
           "_anchor": "image2-1a"
+        },
+        {
+          "_inherit": "gallery1",
+          "_params": {
+            "showBullets": true,
+            "images": [
+              {
+                "image": "@PROJECT_PATH@/assets/images/c-lot-left-1288x964.png",
+                "thumb": "@PROJECT_PATH@/assets/images/c-lot-left-1288x964-800x599.png",
+                "alt": "",
+                "title": "",
+                "active": true
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/c-lot-mid-1288x964.png",
+                "thumb": "@PROJECT_PATH@/assets/images/c-lot-mid-1288x964-800x599.png",
+                "alt": "",
+                "title": "",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/c-lot-right-1288x964.png",
+                "thumb": "@PROJECT_PATH@/assets/images/c-lot-right-1288x964-800x599.png",
+                "alt": "",
+                "title": "",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/c-lot-depth-1056x704.png",
+                "thumb": "@PROJECT_PATH@/assets/images/c-lot-depth-1056x704-800x533.png",
+                "alt": "",
+                "title": "",
+                "active": false
+              }
+            ]
+          },
+          "articleLayout": true,
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "gallery2",
+          "_anchor": "gallery2-o"
+        },
+        {
+          "_params": {
+            "showText": true
+          },
+          "media": {
+            "image": {
+              "src": "@PROJECT_PATH@/assets/images/c-lot-depth-1056x704.png",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/watch?v=QeNomStHLy8",
+              "active": true,
+              "autoplay": false,
+              "loop": false
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-n"
         },
         {
           "_params": {
@@ -2344,7 +2417,7 @@
     "page7.html": {
       "settings": {
         "title": "LO",
-        "order": 10
+        "order": 9
       },
       "components": [
         {
@@ -2428,7 +2501,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/network-arch-1003x841.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -2452,14 +2525,117 @@
           },
           "media": {
             "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/camera-image-1241x376.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-l"
+        },
+        {
+          "_params": {
+            "showText": false
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/lidar-pointcloud-1400x727.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-m"
+        },
+        {
+          "_params": {
+            "showText": false
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/lidar-distance-1152x64.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-j"
+        },
+        {
+          "_params": {
+            "showText": false
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/lidar-intensity-1152x64.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-k"
+        },
+        {
+          "_params": {
+            "showText": false
+          },
+          "media": {
+            "image": {
+              "src": "@PROJECT_PATH@/assets/images/03-640x480.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": "",
+              "active": true
             },
             "video": {
               "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
               "autoplay": false,
-              "loop": false,
-              "active": true
+              "loop": false
             }
           },
           "text": "Create awesome mobile-friendly websites. No coding and free.",
@@ -2469,6 +2645,31 @@
           ],
           "_name": "image2",
           "_anchor": "image2-1g"
+        },
+        {
+          "_params": {
+            "showText": false
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/07-640x480.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-i"
         },
         {
           "_params": {
@@ -2817,7 +3018,7 @@
     "page8.html": {
       "settings": {
         "title": "Infra",
-        "order": 9
+        "order": 8
       },
       "components": [
         {
@@ -2901,7 +3102,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/prescan-int-1400x746.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -2925,14 +3126,17 @@
           },
           "media": {
             "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
+              "src": "@PROJECT_PATH@/assets/images/calibrationtargetimage-w-path-1382x807.png",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": "",
+              "active": true
             },
             "video": {
               "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
               "autoplay": false,
-              "loop": false,
-              "active": true
+              "loop": false
             }
           },
           "text": "Create awesome mobile-friendly websites. No coding and free.",
@@ -3290,7 +3494,7 @@
     "page9.html": {
       "settings": {
         "title": "Hetero",
-        "order": 8
+        "order": 7
       },
       "components": [
         {
@@ -3374,7 +3578,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/equinox-sensors-split-1349x970.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -3398,14 +3602,17 @@
           },
           "media": {
             "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
+              "src": "@PROJECT_PATH@/assets/images/joint-calibration-aligned-1389x842.png",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": "",
+              "active": true
             },
             "video": {
               "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
               "autoplay": false,
-              "loop": false,
-              "active": true
+              "loop": false
             }
           },
           "text": "Create awesome mobile-friendly websites. No coding and free.",
@@ -3763,7 +3970,7 @@
     "page10.html": {
       "settings": {
         "title": "ICP",
-        "order": 7
+        "order": 6
       },
       "components": [
         {
@@ -3847,7 +4054,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/icp-results-1088x663.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -3864,30 +4071,6 @@
           ],
           "_name": "image2",
           "_anchor": "image2-1x"
-        },
-        {
-          "_params": {
-            "showText": false
-          },
-          "media": {
-            "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
-            },
-            "video": {
-              "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
-              "autoplay": false,
-              "loop": false,
-              "active": true
-            }
-          },
-          "text": "Create awesome mobile-friendly websites. No coding and free.",
-          "alias": "purity/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "image2",
-          "_anchor": "image2-1y"
         },
         {
           "_params": {
@@ -4236,7 +4419,7 @@
     "page11.html": {
       "settings": {
         "title": "Handeye",
-        "order": 6
+        "order": 5
       },
       "components": [
         {
@@ -4320,7 +4503,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/gps-cam-handeye-fig-724x794.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -4344,14 +4527,17 @@
           },
           "media": {
             "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
+              "src": "@PROJECT_PATH@/assets/images/handeye-motion-676x491.png",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": "",
+              "active": true
             },
             "video": {
               "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
               "autoplay": false,
-              "loop": false,
-              "active": true
+              "loop": false
             }
           },
           "text": "Create awesome mobile-friendly websites. No coding and free.",
@@ -4709,7 +4895,7 @@
     "page12.html": {
       "settings": {
         "title": "lanekeep",
-        "order": 5
+        "order": 4
       },
       "components": [
         {
@@ -4793,7 +4979,7 @@
           "media": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/robot-833x575.png",
+              "src": "@PROJECT_PATH@/assets/images/sim-pipeline-1400x531.png",
               "width": 1400,
               "link": "",
               "alt": "",
@@ -4817,14 +5003,15 @@
           },
           "media": {
             "image": {
-              "src": "@THEME_PATH@/components/_images/photo-13.jpg",
-              "width": 1400
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/combined-err-841x465.png",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
             },
             "video": {
-              "src": "https://www.youtube.com/watch?v=-E1OT-1xRBc",
-              "autoplay": false,
-              "loop": false,
-              "active": true
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
             }
           },
           "text": "Create awesome mobile-friendly websites. No coding and free.",
@@ -4833,7 +5020,32 @@
             "Theme"
           ],
           "_name": "image2",
-          "_anchor": "image2-2a"
+          "_anchor": "image2-g"
+        },
+        {
+          "_params": {
+            "showText": false
+          },
+          "media": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/ringroad-results-793x626.jpg",
+              "width": 1400,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "video": {
+              "src": "https://www.youtube.com/embed/sOSTC6FM6Bw"
+            }
+          },
+          "text": "Create awesome mobile-friendly websites. No coding and free.",
+          "alias": "purity/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "image2",
+          "_anchor": "image2-h"
         },
         {
           "_params": {
