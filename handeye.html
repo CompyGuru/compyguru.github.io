@@ -37,7 +37,7 @@
 <!-- /Google Analytics -->
 
 
-  <nav class="navbar navbar-light mbr-navbar navbar-fixed-top" id="ext_menu-20" data-rv-view="52" style="background-color: rgb(255, 255, 255);">
+  <nav class="navbar navbar-light mbr-navbar navbar-fixed-top" id="ext_menu-20" data-rv-view="99" style="background-color: rgb(255, 255, 255);">
     <div class="container">
         <button class="navbar-toggler pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
             <div class="hamburger-icon"></div>
@@ -55,7 +55,7 @@
     </div>
 </nav>
 
-<section class="mbr-section mbr-section__container mbr-after-navbar mbr-section__container--first" id="header3-21" data-rv-view="54">
+<section class="mbr-section mbr-section__container mbr-after-navbar mbr-section__container--first" id="header3-21" data-rv-view="101">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -66,7 +66,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-22" data-rv-view="56">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-22" data-rv-view="103">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 lead"><p>I use the Hand-Eye calibration method to calibrate the vehicle mounted GPS/IMU system with a LIDAR and a camera. The principle of the method is shown in the image below. For the case of a camera, various poses of a chessboard are collected as the vehicle is moved to different locations. Various GPS poses are also recorded. Then the geometry of the setup can be utilized and the equation AX = XB can be written and solved for X, the transformation between the GPS reference and the mounting location of the camera.&nbsp;</p><p>For the case of the LIDAR, the ICP algorithm is used in order to obtain the poses of the LIDAR detections and is explained as a separate project. To solve the equation, I used Google's Ceres Solver optimization library in order to simultaneously solve for the rotational and translational components of X.</p></div>
@@ -74,7 +74,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-23" data-rv-view="57">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-23" data-rv-view="104">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -89,7 +89,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-r" data-rv-view="347">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-r" data-rv-view="106">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 lead"><p>The developed platform is driven in a series of maneuvers while recording LIDAR and navigation data for performing the calibration. The figure below shows the navigation system position of the vehicle in blue and the same data extracted from the LIDAR point clouds using the implemented ICP algorithm. The vehicle is driven very slowly to remove motion effects. It can be seen that the odometry from the ICP algorithm is not as accurate as that from the navigation system.&nbsp;</p><p>The ICP algorithm is subjective to measurement errors from the LIDAR sensor. Since each point can have error in its position, the overall result of the ICP algorithm can never be perfect. Furthermore, ICP matching becomes worse when there is significant motion between the two frames or when the position of the LIDAR changes too much between frames. Both of these scenarios result in points that do not correspond to points in the second frame and can result in false correspondences to be found. Another reason why ICP fails to perform well if there are not many usable feature points in the respective point clouds. Having a lot of infrastructure and buildings in the surroundings tended to result in more accurate point cloud matching.</p></div>
@@ -97,7 +97,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--last" id="image2-24" data-rv-view="59">
+<section class="mbr-section mbr-section__container mbr-section__container--last" id="image2-24" data-rv-view="107">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -112,7 +112,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="social-buttons2-25" data-rv-view="61" style="background-color: rgb(255, 248, 224); padding-top: 3rem; padding-bottom: 3rem;">
+<section class="mbr-section mbr-section-small" id="social-buttons2-25" data-rv-view="109" style="background-color: rgb(255, 248, 224); padding-top: 3rem; padding-bottom: 3rem;">
     
 
     <div class="container">
@@ -125,7 +125,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="features1-2j" data-rv-view="63" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+<section class="mbr-section mbr-section-small" id="features1-2j" data-rv-view="111" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
     
     <div class="container">
         <div class="row">
@@ -164,7 +164,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="features1-2k" data-rv-view="66" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+<section class="mbr-section mbr-section-small" id="features1-2k" data-rv-view="114" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
     
     <div class="container">
         <div class="row">
@@ -203,7 +203,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="features1-2l" data-rv-view="69" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+<section class="mbr-section mbr-section-small" id="features1-2l" data-rv-view="117" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
     
     <div class="container">
         <div class="row">

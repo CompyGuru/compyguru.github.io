@@ -37,7 +37,7 @@
 <!-- /Google Analytics -->
 
 
-  <nav class="navbar navbar-light mbr-navbar navbar-fixed-top" id="ext_menu-1i" data-rv-view="112" style="background-color: rgb(255, 255, 255);">
+  <nav class="navbar navbar-light mbr-navbar navbar-fixed-top" id="ext_menu-1i" data-rv-view="160" style="background-color: rgb(255, 255, 255);">
     <div class="container">
         <button class="navbar-toggler pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
             <div class="hamburger-icon"></div>
@@ -55,7 +55,7 @@
     </div>
 </nav>
 
-<section class="mbr-section mbr-section__container mbr-after-navbar mbr-section__container--first" id="header3-1j" data-rv-view="114">
+<section class="mbr-section mbr-section__container mbr-after-navbar mbr-section__container--first" id="header3-1j" data-rv-view="162">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -66,7 +66,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-1k" data-rv-view="116">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-1k" data-rv-view="164">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 lead"><p>One of the features of autonomous vehicles is the ability to interface with infrastructure mounted sensors to acquire additional information about the environment. Knowing the location of the infrastructure sensor is useful in localizing the information attained. A simple and effective way to do this is to know the GPS location, latitude and longitude, of all relevant infrastructure sensors so that the received data can be localized with respect to the GPS system on the developed platform.</p><p>Since the coordinate systems for both the infrastructure sensor and the GPS sensor mounted on the vehicle are stationary, the motion of the vehicle does not affect the transformation between them. Therefore, the technique used in the Heterogeneous Joint Calibration project can be used once again in the exact same way. Moreover, a similar approach to the calibration target design is employed. The target, detected by the infrastructure sensor, should be mounted at the location of the GPS reference point so that both sensors are measuring the position of the same point.&nbsp;</p><p>The calibration procedure is to drive the vehicle in a path that excites all the translation and rotation degrees of freedom and take measurements from both sensors at the exact same time. The simplest way to do this is to stop the vehicle when taking the measurement, but time synchronization and triggering of the sensors may also be employed. If the road surface does not allow the vehicle to excite all the degrees of freedom, an alternative is to mount the targets on a mechanical platform that can independently incur these motions on the targets.</p><p>I use the Prescan simulation software to test this calibration. A simple intersection that I made with the software can be seen in the image below. Prescan allows for simulation of autonomous driving sensors in addition to all the regular features of softwares like CARSIM.&nbsp;</p></div>
@@ -74,7 +74,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-1l" data-rv-view="117">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-1l" data-rv-view="165">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -89,7 +89,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-10" data-rv-view="585">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="content1-10" data-rv-view="167">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 lead"><p>The setup for the calibration between an infrastructure mounted vision sensor and a GPS is shown in the image below. A calibration chessboard is mounted on the roof of the vehicle and one of the corners of the chessboard is overlapped with the GPS reference point. This is the point on the vehicle that the GPS device measures the latitude and longitude of. Any infrastructure sensor that measures the 3D position of a target may be used, but the example uses a camera since this is the most common. The chessboard is mounted on a mechanical platform that provides sinusoidal oscillations along the roll and pitch axis of the chessboard as well as translation in the vertical direction. These, coupled with the planar translations and yaw motion of the vehicle itself, ensure that all the degrees of freedom are excited as measurements are taken. When all the degrees of freedom are excited, 3D homogeneous transformation matrix can be fully resolved. The yellow trajectory shows the path that the vehicle will take. The camera is mounted on the light post and its field of view is shown on the road.</p></div>
@@ -97,7 +97,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-1m" data-rv-view="119">
+<section class="mbr-section mbr-section__container mbr-section__container--middle" id="image2-1m" data-rv-view="168">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -112,7 +112,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container mbr-section__container--last" id="content1-11" data-rv-view="586">
+<section class="mbr-section mbr-section__container mbr-section__container--last" id="content1-11" data-rv-view="170">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 lead"><p>To measure the calibration error, the camera location with respect to the global GPS coordinate frame can be obtained using the solved transformation by transforming the point [0, 0, 0] to the GPS coordinate frame. Then, the resulting coordinates can be subtracted from the known setup coordinates to find the error along each of the x, y, and z axis. Finally, the mean error can be calculated from these three axial errors. The axial errors are 0.1361 m, 0.3316 m, and 0.0267 m along the x, y, and z axis, respectively. The average of these errors is 0.1648 m.&nbsp;</p><p>Since, in the simulation environment the GPS measurement is completely error free, the main cause of error is the camera measurements. Since the calibration chessboard is far from the mounting location of the camera, the chessboard corners cannot be determined to a very high level of accuracy. That is to say, that the error can be reduced as the size of the chessboard is increased or the camera is mounted closer to the vehicle. That being said, the mounting height of the camera is strategic for other reasons and cannot be changed just for a better calibration. Moreover, in a real world GPS system, there is error present in the GPS measurement and so the calibration will be worse than it is in the simulation. Furthermore, it is difficult in the real world to mount a target at the exact GPS reference point. Instead, the target will be mounted at some arbitrary and easy to mount location, but the transformation will be measured. Then the transformed point may be calibrated to obtain the same result, however the measurement error in the transformation will also affect the accuracy of the results.</p></div>
@@ -120,7 +120,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="social-buttons2-1n" data-rv-view="121" style="background-color: rgb(255, 248, 224); padding-top: 3rem; padding-bottom: 3rem;">
+<section class="mbr-section mbr-section-small" id="social-buttons2-1n" data-rv-view="171" style="background-color: rgb(255, 248, 224); padding-top: 3rem; padding-bottom: 3rem;">
     
 
     <div class="container">
@@ -133,7 +133,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="features1-2s" data-rv-view="123" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+<section class="mbr-section mbr-section-small" id="features1-2s" data-rv-view="173" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
     
     <div class="container">
         <div class="row">
@@ -172,7 +172,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="features1-2t" data-rv-view="126" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+<section class="mbr-section mbr-section-small" id="features1-2t" data-rv-view="176" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
     
     <div class="container">
         <div class="row">
@@ -211,7 +211,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section-small" id="features1-2u" data-rv-view="129" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
+<section class="mbr-section mbr-section-small" id="features1-2u" data-rv-view="179" style="background-color: rgb(255, 255, 255); padding-top: 1.5rem; padding-bottom: 0rem;">
     
     <div class="container">
         <div class="row">
